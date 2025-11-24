@@ -1,0 +1,23 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/Rome
+      - TRANSMISSION_WEB_HOME= #optional
+      - USER=mao
+      - PASS=plokij666
+      - WHITELIST= #optional
+      - PEERPORT= #optional
+      - HOST_WHITELIST= #optional
+    volumes:
+      - /home/mao/docker/data/transmission/:/config
+      - /mnt/4C68C0A468C08DE0/torrent/output/:/downloads #optional
+      - /mnt/4C68C0A468C08DE0/torrent/input/:/watch #optional
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    restart: unless-stopped
