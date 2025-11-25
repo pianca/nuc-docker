@@ -3,8 +3,8 @@ services:
     image: lscr.io/linuxserver/transmission:latest
     container_name: transmission
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1002
+      - PGID=1002
       - TZ=Europe/Rome
       - TRANSMISSION_WEB_HOME= #optional
       - USER=mao
@@ -14,8 +14,8 @@ services:
       - HOST_WHITELIST= #optional
     volumes:
       - /home/mao/docker/data/transmission/:/config
-      - /mnt/4C68C0A468C08DE0/torrent/output/:/downloads #optional
-      - /mnt/4C68C0A468C08DE0/torrent/input/:/watch #optional
+      - /mnt/data-ext/torrent/output/:/downloads #optional
+      - /mnt/data-ext/torrent/input/:/watch #optional
     ports:
       - 9091:9091
       - 51413:51413
