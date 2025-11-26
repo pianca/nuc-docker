@@ -1,0 +1,6 @@
+# Ignore all files and directories inside any folder named "data"
+**/data/**
+
+# If you want to keep an empty data directory tracked, add a `.gitkeep`
+# and uncomment the following line to allow it through:
+!**/data/.gitkeep

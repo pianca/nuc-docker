@@ -16,3 +16,6 @@ sudo find /mnt/data-ext -type d -exec chmod 2770 {} \;
 sudo find /mnt/data-ext -type f -exec chmod 660 {} \;
 
 
+media_dir=/var/lib/minidlna
+media_dir=/mnt/data-ext/torrent/output/complete
+media_dir=/mnt/data-ext/torrent/output/incomplete

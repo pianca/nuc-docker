@@ -13,7 +13,7 @@ services:
       - PEERPORT= #optional
       - HOST_WHITELIST= #optional
     volumes:
-      - /home/mao/docker/data/transmission/:/config
+      - /home/mao/docker-compose/transmission/data:/config
       - /mnt/data-ext/torrent/output/:/downloads #optional
       - /mnt/data-ext/torrent/input/:/watch #optional
     ports:
