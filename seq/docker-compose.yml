@@ -1,0 +1,13 @@
+services:
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    environment:
+      - ACCEPT_EULA=Y
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /home/mao/docker-compose/seq/data:/data
+    ports:
+      - 5341:80
+    restart: unless-stopped
