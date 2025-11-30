@@ -1,1 +1,12 @@
 services:
+  web:
+    image: aaf:latest
+    ports:
+      - "5000:8080"
+    volumes:
+      - /home/mao/docker-compose/anime/data/appsettings.json:/app/appsettings.json:ro
+      - /home/mao/docker-compose/anime/data/logs:/app/logs
+      - /mnt/data-ext/torrent/input:/app/torrents
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    restart: unless-stopped
